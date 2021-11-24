@@ -1,0 +1,13 @@
+fr:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: est déjà utilisé.
+            password:
+              too_short: est trop court.
+  password:
+    minimum: caractères minimum
+

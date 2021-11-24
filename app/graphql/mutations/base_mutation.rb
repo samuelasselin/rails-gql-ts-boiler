@@ -5,4 +5,8 @@ module Mutations
     input_object_class Types::BaseInputObject
     object_class Types::BaseObject
   end
+
+  def current_user
+    context[:current_user]
+  end
 end

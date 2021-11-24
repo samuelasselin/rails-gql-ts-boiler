@@ -6,6 +6,7 @@ module.exports = {
   },
   extends: [
     'airbnb',
+    'airbnb-typescript',
   ],
   globals: {
     Atomics: 'readonly',
@@ -17,18 +18,19 @@ module.exports = {
     },
     ecmaVersion: 2018,
     sourceType: 'module',
+    project: './tsconfig.json'
   },
   plugins: [
     'react',
   ],
   rules: {
-    "import/no-named-as-default": 0,
-    "import/no-named-as-default-member": 0,
-    "object-curly-newline": 0,
-    "no-console": 0,
-    "react/jsx-props-no-spreading": 0,
-    "jsx-a11y/label-has-associated-control": 0,
-    "import/prefer-default-export": 0,
-    "react/prop-types": 0
+    'import/no-named-as-default': 0,
+    'import/no-named-as-default-member': 0,
+    'object-curly-newline': 0,
+    'no-console': 0,
+    'react/jsx-props-no-spreading': 0,
+    'jsx-a11y/label-has-associated-control': 0,
+    'import/prefer-default-export': 0,
+    'react/prop-types': 0,
   },
 };
