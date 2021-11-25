@@ -6,7 +6,12 @@ en:
           attributes:
             email:
               taken: already taken.
+              blank: is blank.
           password:
             too_short: to short.
+            blank: is blank.
   password:
     minimum: characters minimum
+  passwords:
+    new:
+      send_me_reset_password_instructions: Send me reset instructions

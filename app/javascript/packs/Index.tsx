@@ -1,7 +1,8 @@
 import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, NormalizedCacheObject } from '@apollo/client';
 import ReactDOM from 'react-dom';
-import { AppBody } from '../front-end-react/components/AppBody';
+import { BrowserRouter } from 'react-router-dom';
+import { App } from '../front-end-react/components/App';
 
 const client = new ApolloClient<NormalizedCacheObject>({
   cache: new InMemoryCache(),
@@ -12,7 +13,9 @@ const BoilerPLate: React.FunctionComponent = () => (
   // @ts-ignore
   // eslint-disable-next-line react/no-children-prop
   <ApolloProvider client={client} children={null}>
-    <AppBody />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </ApolloProvider>
 );
 

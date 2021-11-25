@@ -24,15 +24,16 @@
           </div>
 
           <!-- password input -->
-          <% if @minimum_password_length %>
-            <div>(<%= @minimum_password_length %> <%= t('password.minimum') %>)</div>
-          <% end %>
-
-          <div class="form-outline mb-4">
+          <div class="form-outline mb-1">
             <%= f.password_field :password, class: "form-control form-control-lg", id: "formPassword", autocomplete: "new-password" %>
             <label class="form-label" for="password"><%= f.label :password %></label>
           </div>
 
+          <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> <%= t('password.minimum') %>)</em>
+          <% end %>
+
+          <!-- password input -->
           <div class="form-outline mb-4">
             <%= f.password_field :password_confirmation, class: "form-control form-control-lg", id: "formConfirmPassword", autocomplete: "new-password" %>
             <label class="form-label" for="confirm_password"><%= f.label :password_confirmation %></label>
@@ -44,7 +45,7 @@
 
 
           <p class="small fw-bold mt-2 pt-1 mb-0">Vous avez déjà un compte?
-            <%= link_to t("devise.shared.links.log_in"), new_session_path(resource_name), class: 'link-danger' %><br/>
+            <%= link_to t("devise.shared.links.sign_in"), new_session_path(resource_name), class: 'link-danger' %><br/>
             <br/>
           </p>
 

@@ -6,8 +6,14 @@ fr:
           attributes:
             email:
               taken: est déjà utilisé.
+              blank: n'est pas remplit.
             password:
               too_short: est trop court.
+              blank: n'est pas remplit.
   password:
     minimum: caractères minimum
+  passwords:
+    new:
+      send_me_reset_password_instructions: Envoyez-moi les instructions de réinitialisation
+    change: Modifier mon mot de passe
 
