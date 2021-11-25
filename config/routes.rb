@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users, only: [:sessions, :registrations, :passwords]
 
+  devise_for :users
   if Rails.env.development?
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
     default_url_options :host => "localhost:3000"
